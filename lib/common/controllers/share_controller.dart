@@ -10,7 +10,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:six_cash/common/models/contact_model.dart';
 import 'package:six_cash/helper/route_helper.dart';
 import 'package:get/get.dart';
-import 'package:photo_manager/photo_manager.dart';
+import 'package:image_gallery_saver_plus/image_gallery_saver_plus.dart';
 import 'package:six_cash/util/app_constants.dart';
 import 'package:six_cash/helper/custom_snackbar_helper.dart';
 import 'package:six_cash/features/transaction_money/widgets/share_statement_widget.dart';
@@ -50,7 +50,7 @@ class ShareController extends GetxController implements GetxService{
         final imageFile = File('${directory.path}/qr.png');
         imageFile.writeAsBytesSync(image!);
        
-final asset = await PhotoManager.editor.saveImageWithPath(
+final asset = await ImageGallerySaverPlus.editor.saveImageWithPath(
   imageFile.path,
   title: AppConstants.appName,
 );
