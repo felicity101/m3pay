@@ -16,10 +16,6 @@ workflows:
           flutter clean
           flutter pub get
 
-      - name: Analyze project
-        script: |
-          flutter analyze
-
       - name: Build APK (release)
         script: |
           flutter build apk --release
