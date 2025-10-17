@@ -12,7 +12,7 @@ ThemeData dark = ThemeData(
     titleLarge: TextStyle(color:Color(0xFF8dbac3)),
     titleSmall: TextStyle(color: Color(0xFF25282D)),
   ),
-  dialogTheme: const DialogTheme(surfaceTintColor: Colors.black),
+  dialogTheme: const DialogThemeData(surfaceTintColor: Colors.black),
   dividerColor: const Color(0x2A9E9E9E),
   colorScheme: ColorScheme(
     brightness: Brightness.dark,
