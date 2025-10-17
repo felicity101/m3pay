@@ -49,7 +49,9 @@ class ShareController extends GetxController implements GetxService{
         final directory = await getApplicationDocumentsDirectory();
         final imageFile = File('${directory.path}/qr.png');
         imageFile.writeAsBytesSync(image!);
-        await ImageGallerySaver.saveImage(imageFile.path,albumName: AppConstants.appName).then((value) => showCustomSnackBarHelper('QR code save to your Gallery',isError: false));
+       final bytes = await imageFile.readAsBytes();
+await ImageGallerySaver.saveImage(bytes, name: AppConstants.appName);
+
       }
 
 
